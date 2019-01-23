@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+<form action="plan/" method="POST">
+  			{% csrf_token %}
+			
+				<p><label><strong>Place</strong></label><input type="text" name="place"></p>
+				
+    			<p><strong>Start date</strong><input type="date"  id="date" name="start_date"><strong>
+     			End date</strong><input type="date"  id="date" name="end_date"></p>
+    		
+    			<p><label><strong>Schedule</strong></label><input type="text" name="schedule"></p>
+    			
+   				 <p><label><strong>Things to do</strong></label><input type="text" name="to_do_list"></p> 
+   				 
+    			<input type="submit" value="Create Plan" /> 
+    		
+</form>

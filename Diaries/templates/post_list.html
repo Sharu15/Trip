@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block element %}
+	<a href="/new_post/" class="top-menu" ><h4 align="right" style="color: white"><b>Add new</b></h4></span></a>
+	
+		{% for post in posts %}
+			
+			<div class="card">
+  
+            <div class="container">
+            {{ post.created_date }}<br>
+			<h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2><br>
+			<h6>{{ post.text|truncatechars:150}}</h6>
+			</div>
+		</div>
+		<br>
+		{% endfor %}
+	
+{% endblock %}
+
+{# <a href="/drafts/" class="top-menu"><span class="glyphicon glyphicon-edit">Drafts </span></a>  #}

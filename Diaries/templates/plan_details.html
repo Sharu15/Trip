@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+
+{% block plandetail %}
+    <a href="/plan/" class="top-menu"><span class="glyphicon glyphicon-plus"><h4>Add new</h4></span></a>
+    
+    <h2>Your Plans</h2>
+    {% for p in plan %}
+    	{{ p.created_date }}
+    	{{ p.start_date }}
+    	{{ p.end_date }}
+    	{{ p.place }}
+    	{{ p.schedule }}
+    	{{ p.to_do_list }}
+    {% endfor %}	
+{% endblock %} 
+ 

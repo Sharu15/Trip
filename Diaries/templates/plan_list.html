@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load static %}
+{% block planlist %}
+	
+	<a href="/plan/" class="top-menu" ><span class="glyphicon glyphicon-plus"><h4 align="right" style="color: white"><b>Add new</b></h4></span></a>
+	
+	
+		
+	<h2 style="color: white"><b>Your Plans</b></h2>
+	
+	{% for p in plans %}
+	<div class="card">
+    
+        <div class="container">
+		{{ p.start_date }}
+		<h1><a href="{% url 'plan_detail' pk=plan.pk %}">{{ p.place }}</a></h1>
+		</div>
+	</div>
+	{% endfor %}
+{% endblock %}

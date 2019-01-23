@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block postdetail %}
+    <div>
+        <div class="container" style="size: 30%;background: white;">
+        <h1>{{ post.title }}</h1>
+        <p>{{ post.text|linebreaksbr }}</p>
+    </div>
+    </div><br><br>
+    
+    <a href="/home/" class="btn btn-secondary btn-lg active" role="button"><strong>Back</strong></a>
+    
+    
+    <!-- {% for comment in post.comments.all %}
+        {% if user.is_authenticated %}
+            <div class="comment">
+                <p><label><strong>Add Comment</strong></label><input type="text" name="comment"></p>
+                <input type="submit" value="Comment">
+                <div class="date">
+                    {{ comment.created_date }}
+                    
+                </div>
+                <strong>{{ comment.author }}</strong>
+                <p>{{ comment.text|linebreaks }}</p>
+            </div>
+        {% endif %}
+        <strong>{{ comment.author }}</strong>
+        <p>{{ comment.text|linebreaks }}</p>
+        {% empty %}
+        <p>No comments here yet :(</p>
+    {% endfor %} -->
+{% endblock %}

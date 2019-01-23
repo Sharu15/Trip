@@ -1,0 +1,109 @@
+<!-- {% block content %}
+    
+    {% for post in posts %}
+        <div class="post">
+            <div class="date">
+                {{ post.published_date }}
+            </div>
+            <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
+            <p>{{ post.text|linebreaksbr }}</p>
+            <a href="{% url 'post_detail' pk=post.pk %}">{{ post.approved_comments.count }} Comments</a>
+            <hr>
+        </div>
+    {% endfor %}
+{% endblock %} -->
+{% load static %}
+<html>
+    <head>
+       {# <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">  #}
+        <link rel="stylesheet" href="{% static 'base.css' %}">
+
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    </head>
+    <body id="SignupForm">
+
+        <nav class="navbar fixed-top navbar-light" style="background-color:  #464544  ">
+            <!-- <a class="navbar-brand" href="/">
+                <img src="{% static "images/house.png" %}" width="30" height="30" alt=" " class="d-inline-block align-top">  Rental Manager
+            </a> -->
+            <ul class="nav nav-pills justify-content-end ">
+                <li class="nav-item">
+                   <a class="nav-item nav-link" href="home/" style="color:white;"><strong>Home</strong> <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                   <a class="nav-item nav-link" href="/plan_list/" style="color:white;"><strong>Plan</strong></a>
+                </li>
+                <li class="nav-item">
+                   <a class="nav-item nav-link" href="/profile/" style="color:white;"><strong>Profile</strong></a>
+                </li>
+                <li class="nav-item">
+                   <a class="nav-item nav-link" href="/logout/" style="color:white;"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Logout</strong></a>
+                </li>
+            </ul>
+        </nav>
+        
+        <!-- <nav class="navbar navbar-expand-lg navbar-light navbar navbar-transparent">
+            
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link active" href="home/" style="color:white;"><strong>Home</strong> <span class="sr-only">(current)</span></a>
+                    <a class="nav-item nav-link" href="/plan_list/" style="color:white;"><strong>Plan</strong></a>
+                    <a class="nav-item nav-link" href="/profile/" style="color:white;"><strong></strong></a>
+                    <a class="nav-item nav-link" href="/logout/" style="color:white;"><strong>Logout</strong></a>
+                     <button type="button"  data-toggle="modal" data-target="#skills">
+                            About
+                            </button> -->
+                <!-- </div>
+            </div> 
+             -->
+            <!-- <div class="modal fade" id="skills" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true"> -->
+        <!-- <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <!- <div class="modal-header" style="background-color:#99959B;">
+                    <h5 class="modal-title" id="exampleModalLongTitle">About me</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div> -->
+                <!-- <div class="modal-body" style="background-color: #B8B4B5   ; text-align:left;color:#1D1E2E;padding-left: 50px;">
+                    <h4 >What is tripdiaries?</h4>
+                    <p>uidfhisuhgiur</p>
+                    <hr>
+                    <h4>Have you started planning</h4>
+                    <p>jhfhliur</p>
+                    
+                </div> -->
+                <!-- <div class="modal-footer" style="background-color:#99959B;">
+                    
+                </div> -->
+            <!-- </div> -->
+        <!-- </div> 
+    </div>
+        </nav> -->
+
+        {% block element %}
+        {% endblock %}
+        {% block planlist %}
+        {% endblock %}
+        {% block postdetail %}
+        {% endblock %}
+        {% block plandetail %}
+        {% endblock %}
+        {% block newpost %}
+        {% endblock %}
+        {% block plan %}
+        {% endblock %}
+        {% block profile %}
+        {% endblock %}
+        
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </body>
+</html>

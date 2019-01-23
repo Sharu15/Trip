@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block plan %}
+<div class="container">
+	<div class="login-form">
+		<div class="main-div">
+			<div class="panel">
+   				<h2><em>Plan Your Trip</em></h2>
+   				
+   				<br>
+   			</div>
+
+			<form action="/plan/" method="POST">
+  			{% csrf_token %}
+			<div class="col-md-9">
+			<div class="form-group">
+				<p><label><strong>Place</strong></label><input type="text" name="place"></p>
+			</div><br>
+			<div class="form-group">	
+    			<p><strong>Start date</strong><input type="date" Placeholder="yyyy-mm-dd" id="date" name="start_date"><strong>
+     			End date</strong><input type="date" Placeholder="yyyy-mm-dd" id="date" name="end_date"></p>
+    		</div><br>
+    		<div class="form-group">
+    			<p><label><strong>Schedule</strong></label><input type="text" name="schedule" style="height:200px;width:300px"></p>
+    		</div><br>
+    		<div class="form-group">	
+   				 <p><label><strong>Things to do</strong></label><input type="text" name="to_do_list" style="height:200px;width:300px"></p> 
+   			</div>
+   			<div class="form-group">	 
+    			<input type="submit" value="Create Plan" /> 
+    		</div>	
+			</form>
+		</div>
+	</div>
+</div>			
+{% endblock %}

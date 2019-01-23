@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block newpost %}
+    <h1 style="color:  #f39d8b"><b>New post</b></h1>
+    <form method="POST" class="post-form">{% csrf_token %}
+        <input type="text" name="title" placeholder="Give a title" style="height:40px;width:200px"><br><br>
+        <textarea placeholder="write your story here!" style="height:500px;width:700px" name="text"></textarea><br><br>
+        <button type="submit" class="save btn btn-default" style="background: white"><b>Publish</b></button>
+    </form>
+{% endblock %} 

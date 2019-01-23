@@ -1,0 +1,90 @@
+body#SignupForm{ background-image:url(signin.jpg);background-repeat: no-repeat;background-size: cover;background-attachment: fixed; padding:100px;
+}
+
+.form-heading { color:#fff; font-size:33px;}
+.panel h2{ color:#black; font-size:28px; margin:0 0 8px 0;}
+.panel p { color:#777777; font-size:14px; margin-bottom:30px; line-height:24px;}
+.login-form .form-control {
+  background: #f7f7f7 none repeat scroll 0 0;
+  border: 1px solid #d4d4d4;
+  border-radius: 4px;
+  font-size: 14px;
+  height: 50px;
+  line-height: 50px;
+}
+.main-div {
+  background: #F9F5F3 none repeat scroll 0 0;
+ /* background-image:url(model.jpg);background-repeat: no-repeat;background-size: cover;*/
+  border-radius: 2px;
+  margin: 10px auto 30px;
+  max-width: 75%;
+  padding: 50px 50px 50px 50px;
+}
+
+.login-form .form-group {
+  margin-bottom:10px;
+}
+.login-form{ text-align:center;}
+
+.login-form  .btn.btn-primary {
+  background: #f0ad4e none repeat scroll 0 0;
+  border-color: #f0ad4e;
+  color: #ffffff;
+   font-size: 14px;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  padding: 0;
+}
+
+
+.back { text-align: left; margin-top:10px;}
+.back a {color: #444444; font-size: 13px;text-decoration: none;}
+
+
+div.transbox {
+    margin: 30px;
+    background-color: #A3B3BB ;
+    /*border: 1px solid black;*/
+    opacity: 0.5;
+    filter: alpha(opacity=60); /* For IE8 and earlier */
+}
+
+div.transbox p {
+    margin: 5%;
+    font-weight: bold;
+    color: black;
+}
+
+
+
+div.transbox h2 {
+ 
+  color: #F7F4F5;
+  
+}
+div.transbox h6 {
+  
+  color: #F9033B  ;
+  font-weight: bold;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  height: 30%;
+  width: 23%;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+
+
+
+.container {
+  padding: 2px 16px;
+}
